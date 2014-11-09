@@ -1,7 +1,10 @@
 package me.itsmiiolly.ollypgm;
 
+import java.io.File;
+
 import me.itsmiiolly.ollypgm.intake.BukkitAuthorization;
 import me.itsmiiolly.ollypgm.intake.BukkitCommandRegistration;
+import me.itsmiiolly.ollypgm.map.OPGMMap;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
