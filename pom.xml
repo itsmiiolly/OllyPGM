@@ -1,21 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
- 	<groupId>me.itsmiiolly</groupId>
- 	<artifactId>ollypgm</artifactId>
- 	<version>0.0.1-SNAPSHOT</version>
+	<groupId>me.itsmiiolly</groupId>
+	<artifactId>ollypgm</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>OllyPGM</name>
 	<dependencies>
 		<dependency>
-  			<groupId>org.bukkit</groupId>
-  			<artifactId>bukkit</artifactId>
-  			<version>1.7.9-R0.2</version>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.7.9-R0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sk89q</groupId>
+			<artifactId>intake</artifactId>
+			<version>3.1.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
 			<id>bukkit-repo</id>
 			<url>http://repo.bukkit.org/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>maven.sk89q.com</id>
+			<url>http://maven.sk89q.com/repo/</url>
 		</repository>
 	</repositories>
 	<build>
