@@ -8,16 +8,11 @@
 	<dependencies>
 		<dependency>
   			<groupId>org.bukkit</groupId>
-  			<artifactId>craftbukkit</artifactId>
-  			<version>1.6.4-R2.1-SNAPSHOT</version>
+  			<artifactId>bukkit</artifactId>
+  			<version>1.7.9-R0.2</version>
 		</dependency>
 	</dependencies>
 	<repositories>
-		<repository>
-			<id>repo.oc.tc</id>
-			<url>https://repo.oc.tc/content/groups/public/</url>
-		</repository>
-
 		<repository>
 			<id>bukkit-repo</id>
 			<url>http://repo.bukkit.org/content/groups/public</url>
