@@ -74,4 +74,11 @@ public class OPGMMap {
     public OPGMMapInfo getMapInfo() {
         return this.mapInfo;
     }
+    
+    /**
+     * @return the xml instance for this map
+     */
+    public Document getDocument() {
+        return this.xmlDocument;
+    }
 }
