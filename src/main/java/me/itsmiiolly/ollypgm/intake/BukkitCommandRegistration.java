@@ -43,7 +43,7 @@ public class BukkitCommandRegistration {
     public static CommandMap getCommandMap() {
         CommandMap commandMap = getField(Bukkit.getServer().getPluginManager(), "commandMap");
         if (commandMap == null) {
-            throw new RuntimeException("Could not get Bukkit CommandMap, dynamic command injection failed.");
+            throw new RuntimeException("Could not get Bukkit commandMap, dynamic command injection failed.");
         }
         return commandMap;
     }
