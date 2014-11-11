@@ -12,6 +12,6 @@ We use maven to handle our dependencies.
 
 Credits
 -------
-Idea: [ItsMiiOlly](http://github.com/ItsMiiOlly)
-Code: [molenzwiebel](http://github.com/molenzwiebel) and [skipperguy12](http://github.com/skipperguy12)
+Idea: [ItsMiiOlly](http://github.com/ItsMiiOlly)  
+Code: [molenzwiebel](http://github.com/molenzwiebel) and [skipperguy12](http://github.com/skipperguy12)  
 Based off private code by [molenzwiebel](http://github.com/molenzwiebel), [skipperguy12](http://github.com/skipperguy12), [NathanTheBook](http://github.com/NathanTheBook) and [gcflames5](http://github.com/gcflames5)
