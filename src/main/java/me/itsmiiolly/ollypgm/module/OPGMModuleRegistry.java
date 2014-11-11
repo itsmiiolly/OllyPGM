@@ -23,7 +23,7 @@ public class OPGMModuleRegistry {
      * @param module the module class
      */
     public void register(Class<? extends OPGMModule> module) {
-        if (registeredModules.contains(module)) {
+        if (registeredModules.contains(OPGMRegisteredModule.fromClass(module))) {
             throw new RuntimeException("Cannot register module "+module.getSimpleName()+" twice!");
         }
         registeredModules.add(OPGMRegisteredModule.fromClass(module));

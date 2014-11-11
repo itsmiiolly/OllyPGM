@@ -106,7 +106,7 @@ public class OPGMMapInfo {
         }
         
         public Builder contributors(Collection<OPGMContributor> contributors) {
-            instance.authors = Lists.newArrayList(contributors);
+            instance.contributors = Lists.newArrayList(contributors);
             return this;
         }
         
