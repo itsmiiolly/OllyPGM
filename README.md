@@ -1,7 +1,7 @@
 OllyPGM
 =======
 
-A simple, lightweight OGN testing solution. Now in OllyCode.
+A simple, lightweight OCN testing solution. Now in OllyCode.
 
 Compilation
 -----------
