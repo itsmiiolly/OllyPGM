@@ -27,6 +27,8 @@ public class OPGMPlayer {
     private @Nullable OPGMMatch match;
     private @Nullable OPGMTeam team;
     
+    private @Nullable OPGMPlayerState previousState;
+    
     OPGMPlayer(Player handle) {
         this.handle = handle;
         
@@ -56,11 +58,35 @@ public class OPGMPlayer {
     }
     
     /**
+     * Sets the match for this player
+     * @param newMatch the new match, or null if not in a match
+     */
+    public void setMatch(@Nullable OPGMMatch newMatch) {
+        this.match = newMatch;
+    }
+    
+    /**
      * @return the team this player is in, or <code>null</code> if the player is not participating in a match
      */
     @Nullable
     public OPGMTeam getTeam() {
         return team;
+    }
+    
+    /**
+     * @return the {@link OPGMPlayerState} this {@link OPGMPlayer} was in before entering the match. Returns null if player is not currently participating
+     */
+    @Nullable
+    public OPGMPlayerState getPreviousState() {
+        return previousState;
+    }
+    
+    /**
+     * Sets the captured player state for this player
+     * @param newState the new state, or null if not in a match
+     */
+    public void setPreviousState(@Nullable OPGMPlayerState newState) {
+        this.previousState = newState;
     }
     
     /**
