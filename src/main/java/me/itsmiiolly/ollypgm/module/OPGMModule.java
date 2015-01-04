@@ -40,7 +40,7 @@ public abstract class OPGMModule implements Listener {
         if (registeredListeners.contains(listener)) {
             throw new IllegalArgumentException("Listener "+listener+" is already registered!");
         }
-        
+                
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(listener, getMatch().getPlugin());
         registeredListeners.add(listener);

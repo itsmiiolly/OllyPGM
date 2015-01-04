@@ -13,6 +13,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.material.MaterialData;
 import org.bukkit.util.Vector;
 import org.jdom2.Attribute;
 import org.jdom2.Element;
@@ -52,8 +53,7 @@ public class XMLUtils {
         if (m instanceof LeatherArmorMeta) {
             LeatherArmorMeta lm = (LeatherArmorMeta) m;
             Color javaColor = hex2Rgb("#" + color);
-            lm.setColor(org.bukkit.Color.fromRGB(javaColor.getRed(), javaColor.getGreen(),
-                    javaColor.getBlue()));
+            lm.setColor(org.bukkit.Color.fromRGB(javaColor.getRed(), javaColor.getGreen(), javaColor.getBlue()));
             item.setItemMeta(lm);
         }
         return item;
@@ -148,13 +148,11 @@ public class XMLUtils {
         if (doub.equals("oo") || doub.equals("∞")) return Integer.MAX_VALUE;
         if (doub.equals("-oo") || doub.equals("-∞")) return Integer.MIN_VALUE;
         if (doub.length() > 0 && doub.charAt(0) == '@') doub = doub.substring(1);
-        double i;
         try {
-            i = Double.parseDouble(doub);
+            return Double.parseDouble(doub);
         } catch (Exception ex) {
-            i = defaultValue;
+            return defaultValue;
         }
-        return i;
     }
 
     /**
@@ -181,13 +179,11 @@ public class XMLUtils {
         if (integer == null) return defaultValue;
         if (integer.equals("oo") || integer.equals("∞")) return Integer.MAX_VALUE;
         if (integer.equals("-oo") || integer.equals("-∞")) return Integer.MIN_VALUE;
-        int i;
         try {
-            i = Integer.parseInt(integer);
+            return Integer.parseInt(integer);
         } catch (Exception ex) {
-            i = defaultValue;
+            return defaultValue;
         }
-        return i;
     }
 
     /**
@@ -305,5 +301,33 @@ public class XMLUtils {
             }
         }
         return contribs;
+    }
+    
+    /**
+     * Parses the specified material string
+     * @param mat the string to parse
+     * @param defaultVal the default material
+     * @return the parsed material
+     */
+    @SuppressWarnings("deprecation")
+    public static MaterialData parseMaterial(String mat, Material defaultVal) {
+        if (mat == null) return new MaterialData(defaultVal);
+
+        String[] pieces = mat.split(":");
+        Material material = Material.matchMaterial(pieces[0]);
+        if (material == null) {
+            throw new IllegalArgumentException("Could not find material '" + pieces[0] + "'.");
+        }
+
+        byte data = -1;
+        if (pieces.length > 1) {
+            try {
+                data = Byte.parseByte(pieces[1]);
+            } catch (NumberFormatException e1) {
+                throw new IllegalArgumentException(pieces[1] + " is not a damage value!", e1);
+            }
+        }
+        
+        return material.getNewData(data);
     }
 }

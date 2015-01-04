@@ -119,6 +119,6 @@ public class OPGMMatch {
          * The match world has been unloaded. Players cannot be in the match at this point.<br>
          * <b>Note that this state is rarely seen, if at all. Once a match is set to UNLOADED it is ready for garbage collection and will not exist for much longer</b>
          */
-        UNLOADED;
+        UNLOADED
     }
 }

@@ -124,6 +124,6 @@ public class OPGMTeam {
         /**
          * The team is observing and should be denied any interaction with the {@link OPGMMatch}, players or the world
          */
-        OBSERVING;
+        OBSERVING
     }
 }

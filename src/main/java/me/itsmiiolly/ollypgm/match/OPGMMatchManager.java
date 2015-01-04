@@ -69,10 +69,10 @@ public class OPGMMatchManager {
         try {
             FileUtils.deleteRecursive(matchDirectory);
         } catch (Exception e) {
-            throw new RuntimeException("Could not unload match "+match, e);
+            throw new RuntimeException("Could not unload match "+match+": Error while deleting match files", e);
         }
 
-        System.out.println("Unloaded " + match.getMap().getMapInfo().getDisplayName() + " v" + match.getMap().getMapInfo().getVersion());
+        System.out.println("[OllyPGM] Unloaded " + match.getMap().getMapInfo().getDisplayName() + " v" + match.getMap().getMapInfo().getVersion());
         this.matches.remove(match.getMatchWorld());
     }
 }

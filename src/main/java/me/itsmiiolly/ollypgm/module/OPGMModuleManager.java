@@ -45,6 +45,6 @@ public class OPGMModuleManager {
             }
         }
         
-        throw new RuntimeException("Module class "+moduleClass.getSimpleName()+"does not exist in the module manager for match "+match);
+        throw new RuntimeException("Module class "+moduleClass.getSimpleName()+" does not exist in the module manager for match "+match);
     }
 }
